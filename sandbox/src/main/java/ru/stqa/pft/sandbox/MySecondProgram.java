@@ -8,8 +8,8 @@ public class MySecondProgram {
         double result = distance(p1,p2);
         System.out.println(result);*/
 
-        Point p1 = new Point(5.0,7.0);
-        Point p2 = new Point(8.0,5.0);
+        Point p1 = new Point(1.0,3.0);
+        Point p2 = new Point(5.0,10.0);
         Point p3 = new Point(4.0,9.0);
 
         double result = p1.distance(p2);

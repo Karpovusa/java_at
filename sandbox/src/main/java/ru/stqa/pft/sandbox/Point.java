@@ -10,9 +10,9 @@ public class Point {
     }
     //показывает расстояние между этой точкой и точкой которую передаем в метод
     public  double distance( Point p){
-        double dx = this.pointA - this.pointB;
-        double dy =  p.pointA - p.pointB;
-        return Math.sqrt(dx * dx + dy * dy);
+        double px = p.pointA - this.pointA;
+        double py =  p.pointB - this.pointB;
+        return Math.sqrt(px * px + py * py);
 
     }
 }
