@@ -18,8 +18,14 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
         click(locator);
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+        if(text != null){
+            String existingText = wd.findElement(locator).getAttribute("value");
+            if (!text.equals(existingText)){
+                wd.findElement(locator).clear();
+                wd.findElement(locator).sendKeys(text);
+            }
+
+        }
     }
     public  boolean isAlertPresent() {
         try {
@@ -28,5 +34,8 @@ public class HelperBase {
         } catch (NoAlertPresentException e) {
             return false;
         }
+    }
+    public  boolean isElementPresent(By locator){
+        return wd.findElements(locator).size()>0;
     }
 }
