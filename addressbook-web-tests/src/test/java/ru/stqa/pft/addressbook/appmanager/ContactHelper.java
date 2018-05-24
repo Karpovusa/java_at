@@ -65,4 +65,15 @@ public class ContactHelper extends HelperBase{
     public void contactEdit() {wd.findElement(By.xpath("//div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img")).click();}
 
     public void updateContactData() {wd.findElement(By.xpath("//div[@id='content']/form[1]/input[22]")).click();}
+
+    public void createContact(ContactData contact) {
+        addNewContact();
+        fillContactForm(contact);
+       submitContactForm();
+       goToHomePage();
+    }
+
+    public boolean isThereContact() {
+        return isElementPresent(By.name("selected[]"));
+    }
 }

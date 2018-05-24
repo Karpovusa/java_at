@@ -7,7 +7,7 @@ import ru.stqa.pft.addressbook.model.GroupData;
 
 public class GroupHelper extends HelperBase{
 
-    public boolean isTheAGroup(){
+    public boolean isThereGroup(){
         return isElementPresent(By.name("selected[]"));
     }
 
@@ -51,7 +51,7 @@ public class GroupHelper extends HelperBase{
 
     public void createGroup(GroupData group) {
         initGroupCreation();
-        fillGroupForm(new GroupData("test1", null, null));
+        fillGroupForm(group);
         submitGroupCreation();
         returnToGroupPage();
     }
