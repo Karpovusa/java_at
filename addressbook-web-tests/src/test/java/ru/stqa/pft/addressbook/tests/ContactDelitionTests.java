@@ -9,7 +9,7 @@ public class ContactDelitionTests extends TestBase {
     @Test
     public void testContactDelition(){
         if(!app.getContactHelper().isThereContact()){
-            app.getContactHelper().createContact(new ContactData("test2","test2","test2","test@test.ru","123456"));
+            app.getContactHelper().createContact(new ContactData("test22","test2","test2","test@test.ru","123456"));
         }
         app.getContactHelper().selectContact();
         app.getContactHelper().deleteContact();
